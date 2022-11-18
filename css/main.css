@@ -639,6 +639,10 @@ a:hover {
   --tw-backdrop-sepia:  ;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -687,6 +691,15 @@ a:hover {
   grid-row-end: 7;
 }
 
+.row-end-\[30\] {
+  grid-row-end: 30;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .block {
   display: block;
 }
@@ -695,8 +708,16 @@ a:hover {
   display: grid;
 }
 
+.resize {
+  resize: both;
+}
+
 .grid-cols-home-page {
   grid-template-columns: [left-start] 14% [left-middle] 14% [left-middle] 44% [right-start] 14% [right-middle] 14% [right-end];
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 @media (min-width: 768px) {
