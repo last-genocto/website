@@ -7,19 +7,16 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://genocto.xyz/css/main.min.css">
 
     
 <script>
-var videos = document.getElementsByTagName("video");
-
+var videos = document.getElementsByClassName("video-group");
 function checkScroll() {
     var fraction = 0.8; 
-
     for(var i = 0; i < videos.length; i++) {
-
         var video = videos[i];
-
         var x = video.offsetLeft, y = video.offsetTop, w = video.offsetWidth, h = video.offsetHeight, r = x + w, 
             b = y + h, 
             visibleX, visibleY, visible;
@@ -28,15 +25,15 @@ function checkScroll() {
             visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
 
             visible = visibleX * visibleY / (w * h);
+        console.log(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset);
+        console.log(visibleX, visibleY, visible);
 
-            if (visible > fraction) {
-                video.play();
+        if (visible > fraction) {
+                video.getElementsByTagName("video")[0].play();
             } else {
-                video.pause();
+                video.getElementsByTagName("video")[0].pause();
             }
-
     }
-
 }
 
 window.addEventListener('scroll', checkScroll, false);
@@ -49,169 +46,441 @@ window.addEventListener('resize', checkScroll, false);
             role="main">
     
 <div class="video-grid grid grid-cols-home-page">
-    <div class="col-start-3 row-start-1 row-end-[30]"></div>
+    <div class="relative col-start-3 row-start-1 row-end-[30]">
+        
+        
+            
+            
+            <div class="fixed bottom-[5%] left-[50%] translate-x-[-50%]">
+                <p class="text-neutral-200 ">
+                    <a href="https://www.instagram.com/last_genocto/"
+                        class="text-neutral-200 hover:text-neutral-500">Instagram</a> •
+                    <a href="https://github.com/last-genocto/"
+                       class="text-neutral-200 hover:text-neutral-500">Github</a>
+                    •
+                    © Genocto 2023
+                </p>
+                 </div>
+    </div>
     
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/mixing_unmixing_1.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/mixing_unmixing_1.webm" type="video/webm">
-            <source src="/video/mixing_unmixing_1.mp4" type="video/mp4">
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/lattice_flow.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/lattice_flow.webm" type="video/webm">
+            <source src="/video/lattice_flow.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Observable universe</h2>
+            
+        </div>
+    </div>
     
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/blue_lagoon.mp4.jpg"
-           controls autoplay loop>
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/sliding.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/sliding.webm" type="video/webm">
+            <source src="/video/sliding.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Sliding</h2>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/suprematism.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/suprematism.webm" type="video/webm">
+            <source src="/video/suprematism.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Suprematism</h2>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/tiling.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/tiling.webm" type="video/webm">
+            <source src="/video/tiling.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Tesselation</h2>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/blue_lagoon.mp4.jpg"
+            autoplay loop muted>
             <source src="/video/blue_lagoon.webm" type="video/webm">
             <source src="/video/blue_lagoon.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Blue Lagoon</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/QmUfqMtySXGBzr2TCfuj4xQofP9yr8JRNBMhiYT8Hdmjnp">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
     
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/mixing_unmixing_2.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/mixing_unmixing_2.webm" type="video/webm">
-            <source src="/video/mixing_unmixing_2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/dot_black_hole.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/dot_black_hole.webm" type="video/webm">
-            <source src="/video/dot_black_hole.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/eclipse.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/eclipse.webm" type="video/webm">
-            <source src="/video/eclipse.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/deforming_tube.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/deforming_tube.webm" type="video/webm">
-            <source src="/video/deforming_tube.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/tail_wagging_pyramid.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/tail_wagging_pyramid.webm" type="video/webm">
-            <source src="/video/tail_wagging_pyramid.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/blurred_crescent.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/blurred_crescent.webm" type="video/webm">
-            <source src="/video/blurred_crescent.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/worms.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/worms.webm" type="video/webm">
-            <source src="/video/worms.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/sea_rainbows.mp4.jpg"
-           controls autoplay loop>
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/sea_rainbows.mp4.jpg"
+            autoplay loop muted>
             <source src="/video/sea_rainbows.webm" type="video/webm">
             <source src="/video/sea_rainbows.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">A sea of rainbows</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/QmS7b54zYsUJg2qEfoSPCkS1hLVVQyQW3zPYcXhGsghmDm">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
     
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/octagon_harmonics.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/octagon_harmonics.webm" type="video/webm">
-            <source src="/video/octagon_harmonics.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/infinity.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/infinity.webm" type="video/webm">
-            <source src="/video/infinity.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/mixing_unmixing_3.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/mixing_unmixing_3.webm" type="video/webm">
-            <source src="/video/mixing_unmixing_3.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/orchid.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/orchid.webm" type="video/webm">
-            <source src="/video/orchid.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/lighter.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/lighter.webm" type="video/webm">
-            <source src="/video/lighter.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/in_your_wake.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/in_your_wake.webm" type="video/webm">
-            <source src="/video/in_your_wake.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/expansion.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/expansion.webm" type="video/webm">
-            <source src="/video/expansion.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/aztex.mp4.jpg"
-           controls autoplay loop>
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/aztex.mp4.jpg"
+            autoplay loop muted>
             <source src="/video/aztex.webm" type="video/webm">
             <source src="/video/aztex.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Aztex</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/QmbeDuVSUMEesag9JQRPNxnHPZRcG7WpV8TVmaqz2NXqAJ">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
     
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/where_am_i_going.mp4.jpg"
-           controls autoplay loop>
-            <source src="/video/where_am_i_going.webm" type="video/webm">
-            <source src="/video/where_am_i_going.mp4" type="video/mp4">
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/deforming_tube.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/deforming_tube.webm" type="video/webm">
+            <source src="/video/deforming_tube.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Deforming tube</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/QmZu1q1bBR8uqs9ADj8kRPbSoB2BkZtEbzhPe8zxqFsp3r">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
     
-    <video class="md:col-span-1 col-span-2 mx-auto p-2" width="312" height="312"
-           poster="/video/respiration.mp4.jpg"
-           controls autoplay loop>
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/dot_black_hole.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/dot_black_hole.webm" type="video/webm">
+            <source src="/video/dot_black_hole.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Dot Black Hole</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/QmcRB1KtSSpcUBWZKnC8dFggvKMVwgm24FesKVcWp2dEp1">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/eclipse.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/eclipse.webm" type="video/webm">
+            <source src="/video/eclipse.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Eclipse</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/Qma3ciNmDmnUmLse2nbvuvgRsPiTfBGaPXQ2WTUr4Sbtc1">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/expansion.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/expansion.webm" type="video/webm">
+            <source src="/video/expansion.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Expansion</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/QmYakKGwjtQqVe71YGmk7JZocu9Y5k4CXNFfee7uNrT8vv">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/in_your_wake.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/in_your_wake.webm" type="video/webm">
+            <source src="/video/in_your_wake.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">In your wake</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/QmdRPrSYA1QqCSzNHoTzcAXCkLtefWeXDVXLJrZ6rvkQJV">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/infinity.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/infinity.webm" type="video/webm">
+            <source src="/video/infinity.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Infinity</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/QmTErysMkfs8RtRqQCnzmcA9Lu3VWGtuC8QaivuT3Yfk8T">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/lighter.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/lighter.webm" type="video/webm">
+            <source src="/video/lighter.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Lighter</h2>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/mixing_unmixing_3.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/mixing_unmixing_3.webm" type="video/webm">
+            <source src="/video/mixing_unmixing_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Mixing and Unmixing 3</h2>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/octagon_harmonics.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/octagon_harmonics.webm" type="video/webm">
+            <source src="/video/octagon_harmonics.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Octagon harmonics</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/QmP4CV7tMyu9kUrUEKCmJ3fKkQ6YSfe7R4q3yc6pRGzFhv">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/orchid.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/orchid.webm" type="video/webm">
+            <source src="/video/orchid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Orchid</h2>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/respiration.mp4.jpg"
+            autoplay loop muted>
             <source src="/video/respiration.webm" type="video/webm">
             <source src="/video/respiration.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Respiration</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/QmZfoyAV6oZp9SVEqQZGGbCyrXRW1rjyuvsyyfwkR1ZtQF">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/tail_wagging_pyramid.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/tail_wagging_pyramid.webm" type="video/webm">
+            <source src="/video/tail_wagging_pyramid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">The tail wagging the pyramid</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/QmVu4wo3eKWdSo2dSNAn7jagA84nR77YCmDxF5YySsTMzv">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/where_am_i_going.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/where_am_i_going.webm" type="video/webm">
+            <source src="/video/where_am_i_going.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Where am I Going?</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/QmYdYEX9us1GmrBUujCzGDigHsPViSVkpzxigEqLBZivZ9">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/worms.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/worms.webm" type="video/webm">
+            <source src="/video/worms.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Worms</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/QmZnTLm9Ty4BhfbTvrxdzyBb9or2Kk4jkiA2sn9H81Mgg4">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/mixing_unmixing_2.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/mixing_unmixing_2.webm" type="video/webm">
+            <source src="/video/mixing_unmixing_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Mixing and Unmixing 2</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/QmNddmW3LGTz7N4evaqKrbAeww2bZKWpcQnig4fpTdAcBc">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
+    
+    <div class="video-group group relative md:col-span-1 col-span-2 ">
+        <video class="group mx-auto p-2" width="312" height="312"
+            poster="/video/mixing_unmixing_1.mp4.jpg"
+            autoplay loop muted>
+            <source src="/video/mixing_unmixing_1.webm" type="video/webm">
+            <source src="/video/mixing_unmixing_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hidden group-hover:block overlay absolute top-0 left-1/2
+                    -translate-x-1/2 w-full h-full
+                    text-center text-white pb-2 pt-8 backdrop-blur">
+            <h2 class="my-0 border-b-0 text-m md:text-xl mb-6">Mixing and Unmixing 1</h2>
+            
+            <p><a class="text-white hover:text-neutral-300"
+                   href="https://ipfs.io/ipfs/QmeoGc77A4TKnDxrT5o9vt1GVkJMqmVubtwJ7SfBWuMkb5">Full size (IPFS)</a></p>
+            
+        </div>
+    </div>
     
 </div>
+
 
     </main>
     <script data-goatcounter="https://stats.genocto.xyz/count"
